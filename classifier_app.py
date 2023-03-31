@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn import model_selection
 from sklearn.preprocessing import MinMaxScaler 
+from PIL import Image
 
 # Set Page configuration
 # Read more at https://docs.streamlit.io/1.6.0/library/api-reference/utilities/st.set_page_config
