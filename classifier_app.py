@@ -34,6 +34,8 @@ with col2:
 with col3:
     First = st.slider('First time home owner (0=No, 1=Yes)', 0, 1,1)
 
+submitted = st.button('Submit')    
+    
 # Load data
 df = pd.read_csv('loan_streamlit.csv')
 
@@ -55,7 +57,9 @@ y_pred = model.predict(X_test)
 
 # Print predicted flower species
 st.subheader('Prediction')
-st.metric('Predicted Credit Score class is :', y_pred[0], '')
+if submitted:
+    st.metric('Predicted Price', y_pred[0])
+
 
 # credit score table
 Score_table = {'Credit Score Group': ['5', '4', '3', '2','1'],
@@ -77,8 +81,8 @@ groupby_species_mean = groupby_species_mean.rename(columns={
     "BoCreditScore": "Borrowers' credit score",
     "IncomePerBo": "Income",
     "Amount": "Housing loan amount"
-    "First": "First time home owner"
 })
 
 st.write(groupby_species_mean)
+
 
