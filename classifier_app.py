@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 # Import Libraries
 import streamlit as st
 import pandas as pd
@@ -18,7 +12,10 @@ from sklearn.preprocessing import MinMaxScaler
 st.set_page_config(page_title='Credit Score checker for housing loan', page_icon='🏘️', layout='wide', initial_sidebar_state='expanded')
 
 # Set title of the app
-st.title('🏘️ Credit Score self-checker for housing loan')
+st.title('Credit Score self-checker for housing loan')
+
+image = Image.open('house.jpg')
+st.image(image, caption='Mortgage Loan image from Realty Biz News ')
 
 # Set input widgets
 st.subheader('Input your credentials')
