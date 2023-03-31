@@ -76,10 +76,7 @@ groupby_species_mean = df.groupby('BoCreditScore').mean().applymap("{:,.0f}".for
 groupby_species_mean = groupby_species_mean.rename(columns={
     "BoCreditScore": "Borrowers' credit score",
     "IncomePerBo": "Income",
-    "UPB": "Unpaid loan balance",
     "Amount": "Housing loan amount"
-    "Front": "Housing payment to income ratio",
-    "Back": "Debt payment to income ratio",
     "First": "First time home owner"
 })
 
