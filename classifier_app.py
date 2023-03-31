@@ -30,7 +30,7 @@ with col2:
     Amount = st.slider('Amount needed for housing loan', 10000, 1000000, 70000)
     
 with col3:
-    First = st.slider('First time home owner (0=No, 1=Yes)', 0, 1,1)
+    First = st.selectbox('First time home owner (0=No, 1=Yes)', ['No', 'Yes'])
 
 submitted = st.button('Submit')    
     
@@ -56,7 +56,7 @@ y_pred = model.predict(X_test)
 # Print predicted flower species
 st.subheader('Prediction')
 if submitted:
-    st.metric('Predicted Price', y_pred[0])
+    st.metric('Predicted credit scores', y_pred[0])
 
 
 # credit score table
